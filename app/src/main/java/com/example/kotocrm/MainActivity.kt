@@ -41,6 +41,11 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    override fun onStart() {
+        super.onStart()
+        openLoginPage()
+    }
+
     private fun openLoginPage() {
         val loginIntent = Intent(this, LoginActivity::class.java)
         this.startActivity(loginIntent)

@@ -3,11 +3,13 @@ package com.example.kotocrm.utils
 import android.R
 import android.annotation.TargetApi
 import android.app.Activity
+import android.content.Context
 import android.graphics.Color
 import android.os.Build
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
+import android.widget.Toast
 
 
 /**
@@ -56,4 +58,12 @@ private fun setRootView(activity: Activity) {
         }
         i++
     }
+}
+
+
+fun ToastMsg(context: Context, text: String) {
+    val duration = Toast.LENGTH_SHORT
+
+    val toast = Toast.makeText(context, text, duration)
+    toast.show()
 }
